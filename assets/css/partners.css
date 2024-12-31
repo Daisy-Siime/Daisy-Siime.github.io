@@ -73,3 +73,36 @@
 .knt {
     height: 50px;
 }
+
+/* Adjusting logo size for smaller screens */
+.slider-items img {
+    width: 15%;
+    margin: 20px;
+}
+
+@media (max-width: 768px) {
+    .slider-items img {
+        width: 25%; /* Increase logo size for mobile devices */
+        margin: 10px; /* Reduce margin to accommodate more space */
+    }
+
+    .knt {
+        height: auto; /* Ensure consistent scaling of KNTA logo */
+        max-height: 80px; /* Optional: limit the max height */
+    }
+
+    .slider:before, .slider:after {
+        width: 100px; /* Reduce the blur area on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-items img {
+        width: 30%; /* Further increase size for very small screens */
+        margin: 5px; /* Reduce spacing */
+    }
+
+    .slider:before, .slider:after {
+        width: 50px; /* Further reduce blur area */
+    }
+}
